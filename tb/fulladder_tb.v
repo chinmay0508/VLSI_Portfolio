@@ -5,6 +5,8 @@ fulladder d(.A(i1),.B(i2), .Cin(cin), .Cout(cout), .Sum(sum));
 integer i;
 initial 
 begin
+    $dumpfile("fulladder.vcd");
+    $dumpvars(0,FA_tb);
     for (i = 0; i < 8; i = i + 1) begin
       {i1, i2, cin} = i;
       #5;
