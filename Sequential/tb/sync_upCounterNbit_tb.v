@@ -3,13 +3,13 @@ parameter N=8;
 reg clk,rst,en;
 wire [N-1:0] Q;
 sync_upCounterNbit #(.N(N)) dut (.clk(clk), .rst(rst), .en(en), .Q(Q));
+initial clk=0;
 always #5 clk = ~clk;
 initial
 begin
     $dumpfile("sync_upCounterNbit.vcd");
     $dumpvars(0,UP_TB);
     $monitor("T=%2d | clk=%b rst=%b en=%b Q=%b",$time, clk, rst, en, Q);
-    clk = 0;
     rst = 1;
     en  = 0;
     #12;
