@@ -7,8 +7,6 @@ begin
     if (rst)
         Q <= {N{1'b0}};
     else if (en)
-        Q <= Q + 1'b1;
-    else
-        Q <= Q;   
+        Q <= Q + 1'b1; 
 end
 endmodule
