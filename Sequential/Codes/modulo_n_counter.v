@@ -1,4 +1,4 @@
-module modulo_n_counter (clk,rst,en,count,tc);
+module modulo_n_counter(clk,rst,en,count,tc);
     parameter  N = 10;
     parameter integer WIDTH = (N > 1) ? $clog2(N) : 1;
     input clk,rst,en;
