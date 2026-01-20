@@ -5,7 +5,7 @@ module MooreSeqDet_tb;
     reg data_in;
     wire data_out;
 
-    MooreSeqDet dut (
+    MealySeqDet dut2 (
         .clk(clk),
         .rst(rst),
         .data_in(data_in),
@@ -13,8 +13,8 @@ module MooreSeqDet_tb;
     );
     always #5 clk = ~clk;
     initial begin
-        $dumpfile("MooreSeqDet.vcd");
-        $dumpvars(0,MooreSeqDet_tb);
+        $dumpfile("MealySeqDet.vcd");
+        $dumpvars(0,MealySeqDet_tb);
         $monitor("T=%0t | data_in=%b | data_out=%b",
                   $time, data_in, data_out);
         clk = 0;
