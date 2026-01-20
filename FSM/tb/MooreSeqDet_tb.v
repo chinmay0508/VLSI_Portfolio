@@ -5,7 +5,7 @@ module MooreSeqDet_tb;
     reg data_in;
     wire data_out;
 
-    MooreSeqDet dut1 (
+    MooreSeqDet dut (
         .clk(clk),
         .rst(rst),
         .data_in(data_in),

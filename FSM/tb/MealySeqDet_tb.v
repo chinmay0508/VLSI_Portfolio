@@ -1,11 +1,11 @@
 `timescale 1ns/1ps
-module MooreSeqDet_tb;
+module MealySeqDet_tb;
     reg clk;
     reg rst;
     reg data_in;
     wire data_out;
 
-    MealySeqDet dut2 (
+    MealySeqDet dut (
         .clk(clk),
         .rst(rst),
         .data_in(data_in),
