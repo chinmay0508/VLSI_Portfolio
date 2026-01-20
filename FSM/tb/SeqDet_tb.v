@@ -44,9 +44,4 @@ module MooreSeqDet_tb;
         #10;
         $finish;
     end
-    // Monitor signals
-    initial begin
-        
-    end
-
 endmodule
